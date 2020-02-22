@@ -255,11 +255,16 @@ function indefiniteArticle(word) {
 		return 'a';
 	}
 
-	//return 'an' if word starts with vowel, otherwise 'a'
+	//return 'an' if word starts with vowel
 	let vowels = 'aeiou';
 	if (vowels.includes(word[0])) {
 		return 'an';
 	}
+	let numbers = '1234567890';
+	if (vowels.includes(word[0])) {
+		return 'an';
+	}
+	//return 'an' if word starts with number, otherwise 'a'
 	
 	return 'a';
 }
