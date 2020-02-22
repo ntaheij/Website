@@ -260,7 +260,7 @@ function indefiniteArticle(word) {
 	if (vowels.includes(word[0])) {
 		return 'an';
 	}
-	let numbers = '1234567890';
+	let numbers = '18';
 	if (numbers.includes(word[0])) {
 		return 'an';
 	}
