@@ -261,7 +261,7 @@ function indefiniteArticle(word) {
 		return 'an';
 	}
 	let numbers = '1234567890';
-	if (vowels.includes(word[0])) {
+	if (numbers.includes(word[0])) {
 		return 'an';
 	}
 	//return 'an' if word starts with number, otherwise 'a'
