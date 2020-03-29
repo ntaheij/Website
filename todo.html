@@ -1,7 +1,7 @@
 <head>
 	<script>
 		var url = window.location.href;
-		var captured = /version=([^&]+)/.exec(url)[1];
+		var captured = /v=([^&]+)/.exec(url)[1];
 		var result = captured ? captured : '2';
 		
 		window.location.href = "https://ntaheij.dev/projects/todo/v" + result;
