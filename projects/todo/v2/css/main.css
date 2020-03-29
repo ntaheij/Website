@@ -33,6 +33,7 @@ body {
   letter-spacing: 2px;
   margin: -0.3em 0 0.5em;
 }
+
 .title.noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -41,6 +42,15 @@ body {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 
 .all-tasks {
