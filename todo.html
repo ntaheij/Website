@@ -4,7 +4,10 @@
 		var captured = /v=([^&]+)/.exec(url)[1];
 		var result = captured ? captured : '2';
 		
-		window.location.href = "https://ntaheij.dev/projects/todo/v" + result;
+		if(result === '1' || result === '2')
+		{
+			window.location.href = "https://ntaheij.dev/projects/todo/v" + result;
+		}
 	</script>
 </head>
 <body>
