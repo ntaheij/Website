@@ -19,7 +19,7 @@ getData();
 
 function appendData(){
   for (var i = 0 ; i < countryData.length ; i++)    {
-  $("#tooltip").append("<div data-name='"+countryData[i].country+"' class='data'><h3>"+countryData[i].country+"</h3><h4>Total Cases:<span> "+countryData[i].cases+"</span></h4><h4>Total Deaths:<span> "+countryData[i].deaths+"</span></h4><h4>Total Recoveries:<span> "+countryData[i].recovered+"</span></h4></div>");
+  $("#tooltip").append("<div data-name='"+countryData[i].country+"' class='data'><h3>"+countryData[i].country+"</h3><h4>Total Cases:<span> "+countryData[i].cases+"</span></h4><h4>Total Deaths:<span> "+countryData[i].deaths+" (" + Math.floor((countryData[i].deaths / countryData[i].cases) * 100) + "%)</span></h4><h4>Total Recoveries:<span> "+countryData[i].recovered+" (" + Math.floor((countryData[i].recovered / countryData[i].cases) * 100) + "%)</span></h4></div>");
  
   };
   $('#lower path').hover(function(){
