@@ -1,5 +1,13 @@
 var input = document.getElementById("answer");
 
+
+if(getUrlVars()["answer"] != null)
+{
+    var answer = getUrlVars()["answer"];
+    document.getElementById("answer").value = answer.toString();
+    document.getElementById("button").click();
+}
+
 // Execute a function when the user releases a key on the keyboard
 input.addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
@@ -201,5 +209,13 @@ function min()
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
-  }
+}
 
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
