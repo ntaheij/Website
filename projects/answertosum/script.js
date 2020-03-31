@@ -1,5 +1,34 @@
-function calculateSum() {
+var input = document.getElementById("answer");
 
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    event.preventDefault();
+    document.getElementById("button").click();
+  }
+});
+
+var form = document.getElementById("f");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
+
+
+function calculateSum() {
+    var x = parseInt(document.getElementById("answer").value);
+    if(x.toString()==='NaN')
+    {
+
+        document.getElementById("answer").value = x.toString();
+        document.getElementById("keer").innerHTML = "No numbers as answer.";
+        document.getElementById("gedeeld").innerHTML = "";
+        document.getElementById("plus").innerHTML = "";
+        document.getElementById("min").innerHTML = "";
+        return true;
+    }
     keer();
     gedeeld();
     plus();
