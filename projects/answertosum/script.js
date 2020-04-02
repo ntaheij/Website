@@ -15,10 +15,12 @@ input.addEventListener("keyup", function(event) {
     // Cancel the default action, if needed
     event.preventDefault();
     // Trigger the button element with a click
-    event.preventDefault();
     document.getElementById("button").click();
   }
 });
+
+var e = document.getElementById("niveau");
+var niveau = e.options[e.selectedIndex].value;
 
 var form = document.getElementById("f");
 function handleForm(event) { event.preventDefault(); } 
@@ -37,10 +39,22 @@ function calculateSum() {
         document.getElementById("min").innerHTML = "";
         return true;
     }
+    niveau = e.options[e.selectedIndex].value;
+
+    if(niveau=="select")
+    {
+        document.getElementById("keer").innerHTML = "First choose a niveau."; 
+        return true;
+    }
+
     keer();
+    console.log("done keer");
     gedeeld();
+    console.log("done gedeeld");
     plus();
+    console.log("done plus");
     min();
+    console.log("done min");
 }
 
 function keer()
@@ -71,6 +85,49 @@ function keer()
         {
             v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
         }
+
+        if(niveau==="basis")
+        {
+            while(v3 > (x * 3))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+            }
+
+            while(v2 > (x * 2))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x/v2;
+            }
+        }
+
+        if(niveau==="vmbo")
+        {
+            while(v3 > (x * 5))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+            }
+
+            while(v2 > (x * 4))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x/v2;
+            }
+        }
+
+        if(niveau==="havo")
+        {
+            while(v3 > (x * 7))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+            }
+
+            while(v2 > (x * 6))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x/v2;
+            }
+        }
+        
 
         sum = x+"="+v3.toFixed(2)+"*"+v2;
 
@@ -111,6 +168,90 @@ function gedeeld()
         {
             v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040))));
             v3 = x*v2;
+        }
+
+        if(niveau==="basis")
+        {
+            while(v3 > (x * 6))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+
+            while(v2 > (x * 5))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+        }
+
+        if(niveau==="vmbo")
+        {
+            while(v3 > (x * 8))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+
+            while(v2 > (x * 7))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+        }
+
+        if(niveau==="havo")
+        {
+            while(v3 > (x * 13))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+
+            while(v2 > (x * 12))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+        }
+
+        if(niveau==="vwo")
+        {
+            while(v3 > (x * 15))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+
+            while(v2 > (x * 14))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x*v2;
+            }
         }
 
         sum = x+"="+v3+"/"+v2;
@@ -154,6 +295,91 @@ function plus()
             v3 = x-v2;
         }
 
+        if(niveau==="basis")
+        {
+            while(v3 > (x * 3))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+
+            while(v2 > (x * 2))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+        }
+
+        if(niveau==="vmbo")
+        {
+            while(v3 > (x * 5))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+
+            while(v2 > (x * 4))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+        }
+
+        if(niveau==="havo")
+        {
+            while(v3 > (x * 8))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+
+            while(v2 > (x * 7))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+        }
+
+        if(niveau==="vwo")
+        {
+            while(v3 > (x * 10))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+
+            while(v2 > (x * 9))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x-v2;
+            }
+        }
+
+
         sum = x+"="+v3+"+"+v2;
 
         if(add)
@@ -193,6 +419,110 @@ function min()
         {
             v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(563535))));
             v3 = x+v2;
+        }
+
+        if(niveau==="basis")
+        {
+            while(v3 > (x * 4))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(1000)))).toFixed(2) / 4;
+                v3 = x+v2;
+
+                if(!(v3 > (x*4)))
+                {
+                    break;
+                }
+            }
+
+            while(v2 > (x * 3))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(1000)))).toFixed(2);
+                v3 = x+v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x+v2;
+            }
+        }
+
+        if(niveau==="vmbo")
+        {
+            while(v3 > (x * 5))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(1000)))).toFixed(2) / 5;
+                v3 = x+v2;
+
+                if(!(v3 > (x*4)))
+                {
+                    break;
+                }
+            }
+
+            while(v2 > (x * 4))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x+v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x+v2;
+            }
+        }
+
+        if(niveau==="havo")
+        {
+            while(v3 > (x * 7))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(1000)))).toFixed(2) / 7;
+                v3 = x+v2;
+
+                if(!(v3 > (x*4)))
+                {
+                    break;
+                }
+            }
+
+            while(v2 > (x * 6))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x+v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x+v2;
+            }
+        }
+
+        if(niveau==="vwo")
+        {
+            while(v3 > (x * 12))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(1000)))).toFixed(2) / 11;
+                v3 = x+v2;
+
+                if(!(v3 > (x*4)))
+                {
+                    break;
+                }
+            }
+
+            while(v2 > (x * 11))
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x+v2;
+            }
+
+            while(v2 < 2 || v3 < 2)
+            {
+                v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
+                v3 = x+v2;
+            }
         }
 
         sum = x+"="+v3+"-"+v2;

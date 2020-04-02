@@ -15,6 +15,16 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+select {
+    text-align: center;
+	font-size:30px;
+    position:fixed;
+    width: 20%;
+    bottom: 85%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .prompt {
 	font-family: opensans;
 	color: black;
