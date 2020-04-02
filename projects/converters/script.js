@@ -9,11 +9,11 @@ if(getUrlVars()["input"] != null)
 
 function update()
 {
-    document.getElementById("rot13").innerHTML = textToROT13(input.value);
-    document.getElementById("binary").innerHTML = textToBinary(input.value);
-    document.getElementById("base64").innerHTML = textToBase64(input.value);
-    document.getElementById("morsecode").innerHTML = textToMorseCode(input.value);
-    document.getElementById("nato").innerHTML = textToNato(input.value);
+    document.getElementById("rot13").innerHTML = "ROT13: " + textToROT13(input.value);
+    document.getElementById("binary").innerHTML = "Binary: " + textToBinary(input.value);
+    document.getElementById("base64").innerHTML = "Base64: " + textToBase64(input.value);
+    document.getElementById("morsecode").innerHTML = "MorseCode: " + textToMorseCode(input.value);
+    document.getElementById("nato").innerHTML = "NATO: " + textToNato(input.value);
 }
 
 

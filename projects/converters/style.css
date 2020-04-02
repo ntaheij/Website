@@ -56,108 +56,38 @@ span.rot13 {
     position:absolute;
 	width:300%;
 	top : 25%;
-    left : 9%;
-    text-align: left;
-}
-
-span.rot13.prefix {
-	position:absolute;
-	width:300%;
-	top : 25%;
     left : 0%;
     text-align: left;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none; 
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none; 
-	touch-action: manipulation; 
 }
 
 span.base64 {
     position:absolute;
 	width:300%;
 	top : 32%;
-    left : 9%;
-    text-align: left;
-}
-
-span.base64.prefix {
-	position:absolute;
-	width:300%;
-	top : 32%;
     left : 0%;
     text-align: left;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none; 
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none; 
-	touch-action: manipulation; 
 }
 
 span.morsecode {
     position:absolute;
 	width:300%;
 	top : 39%;
-    left : 9%;
-    text-align: left;
-}
-
-span.morsecode.prefix {
-	position:absolute;
-	width:300%;
-	top : 39%;
     left : 0%;
     text-align: left;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none; 
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none; 
-	touch-action: manipulation; 
 }
 
 span.nato {
     position:absolute;
 	width:300%;
 	top : 46%;
-    left : 9%;
-    text-align: left;
-}
-
-span.nato.prefix {
-	position:absolute;
-	width:300%;
-	top : 46%;
     left : 0%;
     text-align: left;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none; 
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none; 
-	touch-action: manipulation; 
 }
 
 span.binary {
     position:absolute;
 	width:300%;
 	top : 53%;
-    left : 9%;
-    text-align: left;
-}
-
-span.binary.prefix {
-	position:absolute;
-	width:300%;
-	top : 53%;
     left : 0%;
     text-align: left;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none; 
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none; 
-	touch-action: manipulation; 
 }
