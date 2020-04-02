@@ -7,6 +7,7 @@ if(getUrlVars()["input"] != null)
     update();
 }
 
+//Updater
 function update()
 {
     document.getElementById("rot13").innerHTML = "ROT13: " + textToROT13(input.value);
