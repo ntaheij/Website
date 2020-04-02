@@ -34,12 +34,14 @@ function appendData(){
   }, 2000);
 }
 
-
-
   var $self = $('#map'),
   $cursor = $("#tooltip"),
   $country = $("svg path"),
   $map = $("#map #lower");
+
+  $country.on( "click", "tr", function() {
+    console.log( $( this ).text() );
+  });
 
   $country.mouseover(function(){
     gsap.to(this, {
