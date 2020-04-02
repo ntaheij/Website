@@ -44,17 +44,16 @@ function calculateSum() {
     if(niveau=="select")
     {
         document.getElementById("keer").innerHTML = "First choose a niveau."; 
+        document.getElementById("gedeeld").innerHTML = "";
+        document.getElementById("plus").innerHTML = "";
+        document.getElementById("min").innerHTML = "";
         return true;
     }
 
     keer();
-    console.log("done keer");
     gedeeld();
-    console.log("done gedeeld");
     plus();
-    console.log("done plus");
     min();
-    console.log("done min");
 }
 
 function keer()
@@ -172,13 +171,13 @@ function gedeeld()
 
         if(niveau==="basis")
         {
-            while(v3 > (x * 6))
+            while(v3 > (x * 3))
             {
                 v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
                 v3 = x*v2;
             }
 
-            while(v2 > (x * 5))
+            while(v2 > (x * 3))
             {
                 v2 = getRandomInt(getRandomInt(getRandomInt(getRandomInt(4040)))).toFixed(2);
                 v3 = x*v2;
