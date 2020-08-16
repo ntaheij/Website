@@ -16,6 +16,9 @@
 	<!--=-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
+	<meta http-equiv="refresh" content="10; url=https://ntaheij.dev/countdown">
+
 </head>
 <body>
 
@@ -80,14 +83,19 @@
 			// Endtime must be > current time
 			endtimeYear: 2020,
 			endtimeMonth: 08,
-			endtimeDate: 20,
-			endtimeHours: 12,
+			endtimeDate: 16,
+			endtimeHours: 20,
 			endtimeMinutes: 0,
 			endtimeSeconds: 0,
 			timeZone: "Europe/Amsterdam"
 			// ex:  timeZone: "America/New_York", can be empty
 			// go to " http://momentjs.com/timezone/ " to get timezone
 		});
+	</script>
+	<script>
+		if(Date.now() > 1597600800) {
+			window.location = "https://ntaheij.dev/new/";
+		}
 	</script>
 	<!--=-->
 	<script src="vendor/tilt/tilt.jquery.min.js"></script>
