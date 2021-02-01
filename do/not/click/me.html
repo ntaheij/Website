@@ -6,8 +6,23 @@
     <title>Information!</title>
 </head>
 <body>
-    <video width="320" height="240" controls autoplay>
+    <video id="video" controls>
         <source src="./duck.mp4" type=video/mp4>
       </video>
+	  
+	<script>
+		const myVideo = document.getElementById('video');
+
+		// Not all browsers return promise from .play().
+		const playPromise = myVideo.play() || Promise.reject('');
+		playPromise.then(() => {
+		  // Video could be autoplayed, do nothing.
+		}).catch(err => {
+		  // Video couldn't be autoplayed because of autoplay policy. Mute it and play.
+		  myVideo.muted = true;
+		  myVideo.play();
+		  myVideo.muted = false;
+		});
+	</script>
 </body>
 </html>
