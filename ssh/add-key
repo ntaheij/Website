@@ -8,8 +8,8 @@ PASSWORD=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 adduser ${USER}
 echo ${USER}:${PASSWORD} | chpasswd
 
-# add the user to the sudo group so they can sudo
-usermod -aG sudo ${USER}
+# add the user to the wheel group so they can sudo
+usermod -aG wheel ${USER}
 
 # add the ssh public key
 su - ${USER} -c "umask 022 ; mkdir .ssh ; echo $SSH_PUBLIC_KEY >> .ssh/authorised_keys"
